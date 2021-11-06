@@ -9,10 +9,10 @@ class App
     /* Direccion del proyecto:
       para local usar : */
 
-    public $base_url = "/DadoRoom/";
+    //public $base_url = "/DadoRoom/";
 
     /* Para servidor en linea usar la direccion del sitio */
-    //public $base_url = "/myframework/";
+    public $base_url = "/vinos/";
 
     /* Controlador a cargar pro default */
     public $controlador_default = "Home";

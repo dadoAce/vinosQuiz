@@ -3,24 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>DadoRoom</title>
+    <title>Quiz</title>
     <?php include_once 'Views/complementos/referencias/referencias.php'; ?>
 </head>
 
-<body class="bg-g-1">
+<body class=" ">
     <main class="main-principal h-100">
 
-        <!--MENU LATERAL-->
-        <?php $this->vista("complementos/menus/menuPrincipal"); ?>
-
-
-        <!--CONTENIDO-->
-        <section id="contenido" class=" h-100 d-flex justify-content-center ">
-
-            <?php $this->vista("principal/secciones/inicioSesion"); ?>
-        </section>
-
-
+      
     </main>
 
 </body>
