@@ -1,7 +1,7 @@
 <?php
 
 /* Clase principal */
-
+ 
 class App
 {
     /* Cambiar los valores de acuerdo a su proyecto */
