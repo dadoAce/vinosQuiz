@@ -4,139 +4,147 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>QUIZZ WINE BOX CLUB</title>
-    <style>
-        body {
-            background-image: url("../Assets/imgs/quiz/BG2.jpg");
-            /*background-color: #f2f1ef;*/
-        }
-
-        .grid {
-            width: 68%;
-            height: 520px;
-            margin: 0 auto;
-            background-color: #f2f1ef;
-            padding: 10px 50px 50px 50px;
-            border-radius: 50px;
-            border: 2px solid #7c82;
-            box-shadow: 10px 15px 5px #A47c82;
-        }
-
-        .buttons img {
-            width: 200px;
-        }
-
-        .grid h1 {
-            font-family: "monospace";
-            background-color: #22161c;
-            font-size: 35px;
-            text-align: center;
-            color: #ffffff;
-            padding: 2px 0px;
-            border-radius: 50px;
-        }
-
-        hr {
-            margin-top: 50px;
-            color: red;
-            background-color: #22161c;
-            height: 2px;
-            border: none;
-        }
-
-        #score {
-            color: #22161c;
-            text-align: center;
-            font-size: 30px;
-        }
-
-        .grid #question {
-            font-family: "monospace";
-            font-size: 30px;
-            color: #22161c;
-        }
-
-        .buttons {
-            margin-top: 30px;
-        }
-
-        #btn0,
-        #btn1,
-        #btn2,
-        #btn3,
-        #btn4,
-        #btn5,
-        #btn6,
-        #btn7,
-        #btn8,
-        #btn9 {
-
-            padding: 0px;
-            font-size: 20px;
-            color: #fff;
-            border: none;
-            margin: 10px 20px 10px 0px;
-
-        }
-
-        #btn0:hover,
-        #btn1:hover,
-        #btn2:hover,
-        #btn3:hover,
-        #btn4:hover,
-        #btn5:hover,
-        #btn6:hover,
-        #btn7:hover,
-        #btn8:hover,
-        #btn9:hover {
-            cursor: pointer;
-            background-color: #22161c;
-        }
-
-        #btn0:focus,
-        #btn1:focus,
-        #btn2:focus,
-        #btn3:focus,
-        #btn4:focus,
-        #btn5:focus,
-        #btn6:focus,
-        #btn7:focus,
-        #btn8:focus,
-        #btn9:focus {
-            outline: 0;
-        }
-
-        #progress {
-            color: #2b2b2b;
-            font-size: 18px;
-        }
-    </style>
+    <?php include_once 'Views/complementos/referencias/referencias.php'; ?> 
 </head>
+<style>
+    body {
+        background-image: url("../Assets/imgs/quiz/BG2.jpg");
+        /*background-color: #f2f1ef;*/
+    }
+
+    .grid {
+        width: 68%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 10px 50px 50px 50px;
+        border: 2px solid #7c82;
+    }
+
+    * {
+        box-sizing: content-box;
+    }
+
+    .buttons img {
+        width: 150px;
+        background-color: #fff;
+    }
+
+    .grid h1 {
+        font-family: "monospace";
+        background-color: #22161c;
+        font-size: 35px;
+        text-align: center;
+        color: #ffffff;
+        padding: 2px 0px;
+    }
+
+    hr {
+        margin-top: 50px;
+        color: red;
+        background-color: #22161c;
+        height: 2px;
+        border: none;
+    }
+
+    #score {
+        color: #22161c;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .grid #question {
+        font-family: "monospace";
+        font-size: 30px;
+        color: #22161c;
+    }
+
+    .buttons {
+        margin-top: 30px;
+    }
+
+    #btn0,
+    #btn1,
+    #btn2,
+    #btn3,
+    #btn4,
+    #btn5,
+    #btn6,
+    #btn7,
+    #btn8,
+    #btn9 {
+
+        padding: 0px;
+        font-size: 20px;
+        color: #fff;
+        border: none;
+        margin: 10px 20px 10px 0px;
+
+    }
+
+    #btn0:hover,
+    #btn1:hover,
+    #btn2:hover,
+    #btn3:hover,
+    #btn4:hover,
+    #btn5:hover,
+    #btn6:hover,
+    #btn7:hover,
+    #btn8:hover,
+    #btn9:hover {
+        cursor: pointer;
+        background-color: #2e2e2e57;
+        border: solid 1px black;
+    }
+
+    #btn0:focus,
+    #btn1:focus,
+    #btn2:focus,
+    #btn3:focus,
+    #btn4:focus,
+    #btn5:focus,
+    #btn6:focus,
+    #btn7:focus,
+    #btn8:focus,
+    #btn9:focus {
+        outline: 0;
+    }
+
+    #progress {
+        color: #2b2b2b;
+        font-size: 18px;
+    }
+</style>
 
 <body>
-    <div class="grid">
-        <div id="quiz">
-            <h1>QUIZZ WINE BOX CLUB</h1>
-            <hr style="margin-bottom: 20px">
-            <p id="question"></p>
-            <div class="buttons">
-                <button id="btn0"><span id="choice0"></span></button>
-                <button id="btn1"><span id="choice1"></span></button>
-                <button id="btn2"><span id="choice2"></span></button>
-                <button id="btn3"><span id="choice3"></span></button>
-                <button id="btn4"><span id="choice4"></span></button>
-                <button id="btn5"><span id="choice5"></span></button>
-                <button id="btn6"><span id="choice6"></span></button>
-                <button id="btn7"><span id="choice7"></span></button>
-                <button id="btn8"><span id="choice8"></span></button>
-                <button id="btn9"><span id="choice9"></span></button>
+    <div class="container h-100 d-flex justify-content-center align-items-center">
+        <div class="grid">
+            <div id="quiz">
+                <h1>QUIZZ WINE BOX CLUB</h1>
+                <hr style="margin-bottom: 20px">
+                <p id="question"></p>
+                <div class="buttons">
+                    <button id="btn0"><span id="choice0"></span></button>
+                    <button id="btn1"><span id="choice1"></span></button>
+                    <button id="btn2"><span id="choice2"></span></button>
+                    <button id="btn3"><span id="choice3"></span></button>
+                    <button id="btn4"><span id="choice4"></span></button>
+                    <button id="btn5"><span id="choice5"></span></button>
+                    <button id="btn6"><span id="choice6"></span></button>
+                    <button id="btn7"><span id="choice7"></span></button>
+                    <button id="btn8"><span id="choice8"></span></button>
+                    <button id="btn9"><span id="choice9"></span></button>
 
+                    <hr>
+
+                    <div>
+                        <p id="progress">Pregunta x de y</p>
+                    </div>
+                </div>
             </div>
-            <hr style="margin-top: 50px">
-            <footer>
-                <p id="progress">Question x of y</p>
-            </footer>
         </div>
     </div>
+
+
     <script type="text/javascript">
         var respuestas = [];
         var respuestas1 = [];
@@ -174,12 +182,6 @@
 
         function populate() {
 
-
-
-
-
-
-
             if (quiz.isEnded()) {
                 showScores();
             } else {
@@ -206,10 +208,10 @@
 
             button.onclick = function() {
 
- 
 
 
-                const count = respuestas.push(id); 
+
+                const count = respuestas.push(id);
 
 
 
@@ -222,13 +224,17 @@
         function showProgress() {
             var currentQuestionNumber = quiz.questionIndex + 1;
             var element = document.getElementById("progress");
-            element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+            element.innerHTML = "Pregunta " + currentQuestionNumber + " de " + quiz.questions.length;
         };
 
         function showScores() {
             var gameOverHTML = "<h1>Resultados</h1>";
-            gameOverHTML += "<h2 id='score'> Tus resultados: " + respuestas1 + "</h2>";
+            gameOverHTML += "<h2 id='score'> Tus resultados:  </h2>";
 
+            $.each(respuestas1, function(key, value) {
+
+                gameOverHTML += "<br> <h3>" + (key+1) +" " + value + "</h3>";
+            })
 
             var element = document.getElementById("quiz");
             element.innerHTML = gameOverHTML;
@@ -252,7 +258,6 @@
 
         Question.prototype.isCorrectAnswer = function(choice) {
             const count = respuestas1.push(choice);
-            alert("Tus respuestas dos: " + respuestas1);
 
             return this.answer === choice;
         }
@@ -288,4 +293,5 @@
     </script>
 </body>
 
+<?php include_once 'Views/complementos/referencias/referencias_footer.php'; ?> 
 </html>
