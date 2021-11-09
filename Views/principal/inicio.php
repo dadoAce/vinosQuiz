@@ -10,6 +10,7 @@
 <body class=" ">
     <main class="main-principal h-100">
 
+    <p>Quiz</p>
       
     </main>
 
