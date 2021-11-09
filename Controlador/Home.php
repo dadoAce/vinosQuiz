@@ -7,13 +7,8 @@ class Home extends App {
     }
 
     public function index() {
-        $arreglo = []; 
-        $arreglo["inicio"][0]="busqueda";
-        $arreglo["inicio"][1]="xx";
-        $arreglo["inicio"][2]="zz";
-
-        echo json_encode($arreglo) ;
-        //$this->inicio();
+        
+       $this->inicio();
     }
 
     public function inicio() {/* Vista */

@@ -17,8 +17,8 @@ class BD {
         //--------------------------------Datos de la base de datos(datos de ejemplo)
         $db_host = "localhost";
         $db_username = "root";
-        $db_pass = "";
-        $db_name = "dadoroom";
+        $db_pass = "Vinos2021!";
+        $db_name = "vinos";
         //--------------------------------Datos de la base de datos local 
         //--------------------------------Ingresar para la conexion
         try {

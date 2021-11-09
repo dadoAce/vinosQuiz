@@ -10,8 +10,13 @@
 <body class=" ">
     <main class="main-principal h-100">
 
-    <p>Quiz</p>
-      
+        <?php $this->vista("complementos/menus/menuPrincipal"); ?>
+        <div class="container">
+
+            <h1 class="text-center">Quiz</h1>
+
+        </div>
+
     </main>
 
 </body>

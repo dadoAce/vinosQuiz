@@ -4,7 +4,7 @@
 
         <?php if ($_SESSION["usuario"]["rol_usuario"] == 0) {/* si es admin */ ?>
  
-            <h4><i class="bi bi-person" style="color: #f53c56;"></i><a href="<?php echo $this->base_url("Admin/usuarios") ?>">Usuarios</a></h4>
+            <h4><i class="bi bi-person" style="color: #f53c56;"></i><a href="<?php echo $this->base_url("Admin/usuarios") ?>">Quiz</a></h4>
             <h4><i class="bi bi-arrow-bar-left" style="color: #6a59c7;"></i><a href="<?php echo $this->base_url("Home/cerrarSesion") ?>">CerrarSesion</a></h4>
 
         <?php } else {/* si es cliente */

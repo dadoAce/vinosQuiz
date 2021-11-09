@@ -4,7 +4,7 @@
             <div class="d-flex justify-content-end cerrar-menu  pr-3">x</div>
             <div class="py-3  d-flex flex-column flex-md-row  align-items-center justify-content-center">
                 <img width="30" src="<?php echo $this->base_url("/Assets/imgs/sistema/LogoDado200p.png") ?>" class="rounded-circle bg-white">
-                <div class="menu-site-title px-1">Dadoroom</div>
+                <div class="menu-site-title px-1">Admin</div>
             </div>
         </div>
         <div class="ml-1-adorno-1"></div>
@@ -22,23 +22,15 @@
         <!-- INICIO:SECCION -->
         <div class="menu-seccion text-left pl-4">
             <a class="seccion-titulo">
-                MENUS
+            Cuestionarios
             </a>
             <div class="menu-seccion-item text-left pl-2">
-                <a>Inicio</a>
+                <a>Administrar</a>
             </div>
-        </div>
-        <!-- FIN: SECCION -->
-        <!-- INICIO:SECCION -->
-        <div class="menu-seccion text-left pl-4">
-            <a class="seccion-titulo">
-
-                Forms
-            </a>
             <div class="menu-seccion-item text-left pl-2">
-                <a>Inicio</a>
-            </div>
+                <a>Respuestas</a>
+            </div> 
         </div>
-        <!-- FIN: SECCION -->
+        <!-- FIN: SECCION --> 
     </div>
 </div>
