@@ -23,7 +23,12 @@ class Home extends App {
         $datos["contenido"] = "Views/principal/usuarios.php"; 
         $this->vista("principal/inicio",$datos) ;
     }
-
+    public function quiz() {/* Vista */
+        
+        require_once 'Modelo/UsuarioModel.php';
+        
+        $this->vista("quiz/index") ;
+    }
     public function Bienvenido() {/* Vista */
         include_once "Views/principal/template_Admin.php";
     }
