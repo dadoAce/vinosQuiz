@@ -6,7 +6,7 @@
     <title>QUIZZ WINE BOX CLUB</title>
     <style>
         body {
-            background-image: url("/Assets/imgs/quiz/BG2.jpg");
+            background-image: url("../Assets/imgs/quiz/BG2.jpg");
             /*background-color: #f2f1ef;*/
         }
 
@@ -191,7 +191,7 @@
                 var choices = quiz.getQuestionIndex().choices;
                 for (var i = 0; i < choices.length; i++) {
                     var element = document.getElementById("choice" + i);
-                    element.innerHTML = images[choices[i]] ? '<img src="/Assets/imgs/quiz/' + images[choices[i]] + '"/>' : choices[i];
+                    element.innerHTML = images[choices[i]] ? '<img src="../Assets/imgs/quiz/' + images[choices[i]] + '"/>' : choices[i];
                     guess("btn" + i, choices[i]);
 
 
