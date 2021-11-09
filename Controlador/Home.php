@@ -7,7 +7,11 @@ class Home extends App {
     }
 
     public function index() {
-        $this->inicio();
+
+
+        return 
+        $this->vista("principal/inicio") ;
+        //$this->inicio();
     }
 
     public function inicio() {/* Vista */
