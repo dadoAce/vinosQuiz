@@ -17,17 +17,17 @@ class BD
     {
 
         //--------------------------------Datos de la base de datos(datos de ejemplo)
-        /*
         $db_host = "localhost";
         $db_username = "u518286121_Pass_2021_host";
         $db_pass = "Vinos2021!";
         $db_name = "u518286121_vinos";
-        */
-
+        
+        /*
         $db_host = "151.106.116.52";
         $db_username = "u518286121_Pass_2021_host";
         $db_pass = "Vinos2021!";
         $db_name = "u518286121_vinos";
+        */
         //--------------------------------Datos de la base de datos local 
         //--------------------------------Ingresar para la conexion
         try {
