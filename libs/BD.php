@@ -4,18 +4,27 @@ define("MYSQL_CONN_ERROR", "Unable to connect to database.");
 // Ensure reporting is setup correctly
 mysqli_report(MYSQLI_REPORT_STRICT);
 
-class BD {
- 
+class BD
+{
+
     public $mysqli = null;
 
-    function __construct() {
-        
+    function __construct()
+    {
     }
 
-    public function connection($query, $last_id = false) {
+    public function connection($query, $last_id = false)
+    {
 
         //--------------------------------Datos de la base de datos(datos de ejemplo)
+        /*
         $db_host = "localhost";
+        $db_username = "u518286121_Pass_2021_host";
+        $db_pass = "Vinos2021!";
+        $db_name = "u518286121_vinos";
+        */
+
+        $db_host = "151.106.116.52";
         $db_username = "u518286121_Pass_2021_host";
         $db_pass = "Vinos2021!";
         $db_name = "u518286121_vinos";
@@ -52,27 +61,30 @@ class BD {
                 }
             }
         } catch (mysqli_sql_exception $e) {
-            return "No se Puede Conectar a la Base de datos ".$e;
+            return "No se Puede Conectar a la Base de datos " . $e;
         }
     }
 
-    public function cerrar($mysqli) {
+    public function cerrar($mysqli)
+    {
         mysqli_close($mysqli);
     }
 
-    function getMysqli() {
+    function getMysqli()
+    {
         return $this->mysqli;
     }
 
-    function setMysqli($mysqli) {
+    function setMysqli($mysqli)
+    {
         $this->mysqli = $mysqli;
     }
 
     /* ejecutar */
 
-    function bdQuery($query, $last_id = false) {
+    function bdQuery($query, $last_id = false)
+    {
         $result = $this->connection($query, $last_id);
         return $result;
     }
-
 }

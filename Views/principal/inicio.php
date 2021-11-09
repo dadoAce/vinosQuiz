@@ -14,7 +14,13 @@
         <div class="container">
 
             <h1 class="text-center">Quiz</h1>
-
+            <?php 
+            if (isset($contenido)) {
+                include_once $contenido;
+            }else{
+                echo "nada";
+            }
+            ?>
         </div>
 
     </main>
@@ -23,4 +29,4 @@
 
 </html>
 
-<?php include_once 'Views/complementos/referencias/referencias_footer.php'; ?>
+<?php include_once 'Views/complementos/referencias/referencias_footer.php'; ?>;

@@ -1,7 +1,7 @@
 <?php
 
 /* Clase principal */
- 
+
 class App
 {
     /* Cambiar los valores de acuerdo a su proyecto */
@@ -12,7 +12,7 @@ class App
     public $base_url = "/vinosQuiz";
 
     /* Para servidor en linea usar la direccion del sitio */
-   // public $base_url = "/vinos/";
+    // public $base_url = "/vinos/";
 
     /* Controlador a cargar pro default */
     public $controlador_default = "Home";
@@ -130,9 +130,15 @@ class App
     }
 
     /**LLAMAR A VISTA */
-    public function vista($vista, $include = null)
+    public function vista($vista, $datos = null)
     {
+ 
+
         if (file_exists("Views/" . $vista . ".php")) {
+            if ($datos != null) {
+
+                extract($datos);
+            } 
 
             include_once "Views/" . $vista . ".php";
         } else {

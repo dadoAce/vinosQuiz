@@ -12,7 +12,16 @@ class Home extends App {
     }
 
     public function inicio() {/* Vista */
-        $this->vista("principal/inicio") ;
+        
+        require_once 'Modelo/UsuarioModel.php';
+        /* Crear Objeto */
+        $usuarioM = new UsuarioModel();
+
+        /* Crear variables */ 
+        $datos["usuarios"]  = $usuarioM->selectAll();
+        
+        $datos["contenido"] = "Views/principal/usuarios.php"; 
+        $this->vista("principal/inicio",$datos) ;
     }
 
     public function Bienvenido() {/* Vista */
