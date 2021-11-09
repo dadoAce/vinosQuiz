@@ -7,8 +7,6 @@ class Home extends App {
     }
 
     public function index() {
-        header('Access-Control-Allow-Origin: https://vinosdado.myshopify.com/');
-        header('Access-Control-Allow-Methods: GET'); 
         $arreglo = []; 
         $arreglo["inicio"][0]="busqueda";
         $arreglo["inicio"][1]="xx";
