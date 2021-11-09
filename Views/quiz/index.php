@@ -89,7 +89,7 @@
         #btn8:hover,
         #btn9:hover {
             cursor: pointer;
-            background-color: ##22161c;
+            background-color: #22161c;
         }
 
         #btn0:focus,
