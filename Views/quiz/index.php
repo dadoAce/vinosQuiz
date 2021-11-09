@@ -193,7 +193,8 @@
                 var choices = quiz.getQuestionIndex().choices;
                 for (var i = 0; i < choices.length; i++) {
                     var element = document.getElementById("choice" + i);
-                    element.innerHTML = images[choices[i]] ? '<img src="../Assets/imgs/quiz/' + images[choices[i]] + '"/>' : choices[i];
+                    //element.innerHTML = images[choices[i]] ? '<img src="../Assets/imgs/quiz/' + images[choices[i]] + '"/>' : choices[i];
+                    element.innerHTML = images[choices[i]] ? '<img src="https://dadoroom.com/vinos/Assets/imgs/quiz/' + images[choices[i]] + '"/>' : choices[i];
                     guess("btn" + i, choices[i]);
 
 
