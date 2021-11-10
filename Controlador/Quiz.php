@@ -12,7 +12,12 @@ class Quiz extends App
 
         $this->quiz();
     }
+    public function quiz_api()
+    {/* Vista */
 
+
+        $this->vista("quiz/quiz");
+    }
     public function quiz()
     {/* Vista */
 
