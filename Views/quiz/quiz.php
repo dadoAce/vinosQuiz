@@ -139,10 +139,17 @@
         -webkit-appearance: none;
         appearance: none;
     }
+
+    .mensajeGuardado {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 <div class="container h-100 d-flex justify-content-center align-items-center">
-    <div class="dr_grid ">
-        <div id="dr-quiz">
+    <div class="dr_grid">
+        <div id="dr-quiz-body">
             <h1>QUIZZ WINE BOX CLUB</h1>
             <hr style="margin-bottom: 20px">
             <p id="question"></p>
@@ -168,7 +175,7 @@
                 </div>
             </div>
         </div>
-        <input class=" button button--primary" id="btnEnviarResultados" style="display: none;" value="Guardar Resultados">
+        <input class=" button button--primary" id="btnEnviarResultados" style="display: none;" value="Guardar Resultados" type="button">
     </div>
 </div>
 
@@ -260,7 +267,7 @@
             gameOverHTML += "<br> <h3>" + (key + 1) + " " + value + "</h3>";
         })
 
-        var element = document.getElementById("dr-quiz");
+        var element = document.getElementById("dr-quiz-body");
         element.innerHTML = gameOverHTML;
     };
 
@@ -316,12 +323,14 @@
     populate();
     $("#btnEnviarResultados").on("click", function() {
 
+        var usuario = $("#dr-quiz").data("dr-quiz");
         var resultados = JSON.stringify(respuestas1)
         $.ajax({
 
             dataType: "json",
             data: {
-                Resultados: resultados
+                Resultados: resultados,
+                usuario:usuario
             },
             //url: '../Quiz/GuardarResultados',
             url: 'https://dadoroom.com/vinos/Quiz/GuardarResultados',
@@ -329,10 +338,12 @@
             success: function(response) {
                 console.log("Bien");
                 console.log(response)
+                $("#dr_grid").html("<div class='mensajeGuardado'>Encuenta Guardada</div>")
             },
             error: function(error) {
                 console.log("Error");
                 console.log(error);
+                alert("Ocurrio un error");
             }
         });
 

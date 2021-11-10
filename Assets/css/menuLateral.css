@@ -1,9 +1,14 @@
 #menu-lateral-1 {
-    background: #0786f3;
+    background: #063f95;
     font-family: Arial, Helvetica, sans-serif;
     width: 15%;
     border-right: #000000 solid 1px;;
 
+}
+#contenedor{
+    
+    width: 85%;
+    overflow-y: auto;
 }
 .menu-lateral-header{
     background-color: rgb(0, 0, 0);
@@ -20,20 +25,29 @@
     cursor: pointer;
     font-weight: 700;
     color: #333;
+    padding-left:7%;
 }
 
 #menu-lateral-1 .menu-seccion-item {
     cursor: pointer;
+    padding: 4% 0%; 
 }
 .menu-seccion-item a{
     color: #000000;
+    padding-left:10%;
 }
-.menu-seccion-item a:hover{
+.menu-seccion-item:hover  {
+    background-color: #ffffff;
     color: #3d3d3d;
+    
+}
+.menu-seccion-item:hover a{
+    color: #3d3d3d !important;
+    
 }
 
 .menu-seccion {
-    margin-top: 5%; 
+    padding: 4% 0%; 
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;

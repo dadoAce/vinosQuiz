@@ -32,9 +32,9 @@ class Quiz extends App
     {
         require_once 'Modelo/RespuestaModel.php';
         $RespuestaM = new RespuestaModel();
-        $datos["respuestas"] = $_POST["Resultados"]; 
-        $datos["usuario"] = "Prueba";
-         $result = $RespuestaM->save($datos);
-         echo  json_encode($result);
+        $datos["respuestas"] = $_POST["Resultados"];
+        $datos["usuario"] = $_POST["usuario"];
+        $result = $RespuestaM->save($datos);
+        echo  json_encode($result);
     }
 }

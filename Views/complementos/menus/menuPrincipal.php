@@ -9,26 +9,24 @@
         </div>
         <div class="ml-1-adorno-1"></div>
         <!-- INICIO:SECCION -->
-        <div class="menu-seccion text-left pl-4">
-            <a href="<?php echo $this->base_url() ?>" class="seccion-titulo">
-
-                PRINCIPAL
-            </a>
-            <div class="menu-seccion-item text-left pl-2">
-                Inicio
+        <div class="menu-seccion text-left ">
+            <div class="menu-seccion-item text-left ">
+                <a href="<?php echo $this->base_url() ?>" class="  text-white">
+                    Inicio
+                </a>
             </div>
         </div>
         <!-- FIN: SECCION -->
         <!-- INICIO:SECCION -->
-        <div class="menu-seccion text-left pl-4">
-            <a class="seccion-titulo">
+        <div class="menu-seccion text-left  ">
+            <a class="seccion-titulo text-white">
                 Cuestionarios
             </a>
-            <div class="menu-seccion-item text-left pl-2">
-                <a href="<?php echo $this->base_url() ?>/Quiz">Quiz</a>
+            <div class="menu-seccion-item text-left ">
+                <a class="text-white" href="<?php echo $this->base_url() ?>/Quiz">Quiz</a>
             </div>
-            <div class="menu-seccion-item text-left pl-2">
-                <a href="<?php echo $this->base_url() ?>/Home/Respuestas">Respuestas</a>
+            <div class="menu-seccion-item text-left ">
+                <a class="text-white" href="<?php echo $this->base_url() ?>/Home/Respuestas">Respuestas</a>
             </div>
         </div>
         <!-- FIN: SECCION -->

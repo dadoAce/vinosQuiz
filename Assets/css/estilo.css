@@ -30,6 +30,8 @@ html,body{
     height: 100%;
     padding: 0px;
     margin: 0px;
+    overflow-y: hidden;
+    background-color: #c9c8c836;
 }
 /*Fondos*/
 /*.background: linear-gradient(to top, white 52%, #191919 50%);*/

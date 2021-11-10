@@ -11,7 +11,7 @@
     <main class="main-principal h-100">
 
         <?php $this->vista("complementos/menus/menuPrincipal"); ?>
-        <div class="container">
+        <div id="contenedor">
 
             <h1 class="text-center">Quiz</h1>
             <?php 
