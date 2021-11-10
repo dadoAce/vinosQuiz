@@ -322,11 +322,11 @@
     // display quiz
     populate();
     $("#btnEnviarResultados").on("click", function() {
-
+        $(this).hide("fast")
         var usuario = $("#dr-quiz").data("origen");
         var resultados = JSON.stringify(respuestas1)
         console.log(usuario);
-        /*
+      
         $.ajax({
 
             dataType: "json",
@@ -348,7 +348,7 @@
                 alert("Ocurrio un error");
             }
         });
-        */
+         
 
     })
 </script>
