@@ -22,9 +22,10 @@
                     <h5>Respuestas</h5>
                     <table class="table table-light w-100">
                         <thead>
-                            <th>Usuarios</th>
-                            <th>Rol</th>
-                            <th>Estatus</th>
+                            <th>#</th>
+                            <th>Origen</th>
+                            <th>Respuesta</th>
+                            <th>Fecha</th>
                             <th> </th>
                         </thead>
                         <tbody>
@@ -33,8 +34,8 @@
                                 <?php foreach ($respuestas as $value) { ?>
                                     <tr>
                                         <td> <?php echo $value["idRegistro"] ?></td>
-                                        <td><?php echo $value["respuestas"] ?></td>
                                         <td><?php echo $value["usuario"] ?></td>
+                                        <td><?php echo $value["respuestas"] ?></td>
                                         <td><?php echo $value["fecha"] ?></td>
                                         <td>
                                             <a href=" " class="btn btn-danger">Eliminar</a>
