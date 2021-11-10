@@ -4,7 +4,7 @@
         /*background-color: #f2f1ef;*/
     }
 
-    .grid {
+    .dr_grid {
         width: 68%;
         margin: 0 auto;
         background-color: #fff;
@@ -23,7 +23,7 @@
         background-color: #fff;
     }
 
-    .grid h1 {
+    .dr_grid h1 {
         font-family: "monospace";
         background-color: #22161c;
         font-size: 35px;
@@ -46,7 +46,7 @@
         font-size: 30px;
     }
 
-    .grid #question {
+    .dr_grid #question {
         font-family: "monospace";
         font-size: 30px;
         color: #22161c;
@@ -141,8 +141,8 @@
     }
 </style>
 <div class="container h-100 d-flex justify-content-center align-items-center">
-    <div class="grid ">
-        <div id="quiz">
+    <div class="dr_grid ">
+        <div id="dr-quiz">
             <h1>QUIZZ WINE BOX CLUB</h1>
             <hr style="margin-bottom: 20px">
             <p id="question"></p>
@@ -260,7 +260,7 @@
             gameOverHTML += "<br> <h3>" + (key + 1) + " " + value + "</h3>";
         })
 
-        var element = document.getElementById("quiz");
+        var element = document.getElementById("dr-quiz");
         element.innerHTML = gameOverHTML;
     };
 
