@@ -10,7 +10,7 @@
         <div class="ml-1-adorno-1"></div>
         <!-- INICIO:SECCION -->
         <div class="menu-seccion text-left pl-4">
-            <a href="https://dadoroom.com/vinos" class="seccion-titulo">
+            <a href="<?php echo $this->base_url() ?>" class="seccion-titulo">
 
                 PRINCIPAL
             </a>
@@ -25,10 +25,10 @@
                 Cuestionarios
             </a>
             <div class="menu-seccion-item text-left pl-2">
-                <a href="https://dadoroom.com/vinos/Quiz">Quiz</a>
+                <a href="<?php echo $this->base_url() ?>/Quiz">Quiz</a>
             </div>
             <div class="menu-seccion-item text-left pl-2">
-                <a href="https://dadoroom.com/vinos/Home/Respuestas">Respuestas</a>
+                <a href="<?php echo $this->base_url() ?>/Home/Respuestas">Respuestas</a>
             </div>
         </div>
         <!-- FIN: SECCION -->
