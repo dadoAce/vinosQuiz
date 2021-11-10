@@ -340,7 +340,7 @@
             success: function(response) {
                 console.log("Bien");
                 console.log(response)
-                $("#dr_grid").html("<div class='mensajeGuardado'>Encuenta Guardada</div>")
+                $("#dr-quiz-body").html("<div style='height: 100%;display: flex;justify-content: center;align-items: center;'><h2 >Encuesta Guardada</h2></div>")
             },
             error: function(error) {
                 console.log("Error");
@@ -348,7 +348,7 @@
                 alert("Ocurrio un error");
             }
         });
-         
+        
 
     })
 </script>
