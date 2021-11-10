@@ -323,8 +323,10 @@
     populate();
     $("#btnEnviarResultados").on("click", function() {
 
-        var usuario = $("#dr-quiz").data("dr-quiz");
+        var usuario = $("#dr-quiz").data("origen");
         var resultados = JSON.stringify(respuestas1)
+        console.log(usuario);
+        /*
         $.ajax({
 
             dataType: "json",
@@ -346,6 +348,7 @@
                 alert("Ocurrio un error");
             }
         });
+        */
 
     })
 </script>
