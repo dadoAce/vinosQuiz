@@ -294,11 +294,13 @@
 
             var resultados = JSON.stringify(respuestas1)
             $.ajax({
+
+                dataType: "json",
                 data: {
                     Resultados: resultados
                 },
-               // url: '../vinos/Quiz/GuardarResultados',
-                url: 'https://dadoroom.com/vinos/Quiz/GuardarResultados',
+                //url: '../Quiz/GuardarResultados',
+                 url: 'https://dadoroom.com/vinos/Quiz/GuardarResultados',
                 type: 'post',
                 success: function(response) {
                     console.log("Bien");

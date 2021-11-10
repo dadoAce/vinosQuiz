@@ -1,28 +1,35 @@
 <?php
 
-class Quiz extends App {
+class Quiz extends App
+{
 
-    function __construct() {
-        
+    function __construct()
+    {
     }
 
-    public function index() {
-        
-       $this->quiz();
+    public function index()
+    {
+
+        $this->quiz();
     }
- 
-    public function quiz() {/* Vista */
-        
-        require_once 'Modelo/UsuarioModel.php';
-        
-        $this->vista("quiz/index") ;
+
+    public function quiz()
+    {/* Vista */
+
+
+        $this->vista("quiz/index");
     }
-    public function Bienvenido() {/* Vista */
+    public function Bienvenido()
+    {/* Vista */
         include_once "Views/principal/template_Admin.php";
     }
-    public function GuardarResultados() { 
-        echo "aasdasd";
-         //echo var_dump($_POST);
+    public function GuardarResultados()
+    {
+        require_once 'Modelo/RespuestaModel.php';
+        $RespuestaM = new RespuestaModel();
+        $datos["respuestas"] = $_POST["Resultados"]; 
+        $datos["usuario"] = "Prueba";
+         $result = $RespuestaM->save($datos);
+         echo  json_encode($result);
     }
-
 }
