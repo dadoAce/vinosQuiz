@@ -8,7 +8,7 @@
 </head>
 <style>
     body {
-        background-image: url("../../Assets/imgs/quiz/BG2.jpg");
+        background-image: url("https://dadoroom.com/vinos/Assets/imgs/quiz/BG2.jpg");
         /*background-color: #f2f1ef;*/
     }
 
