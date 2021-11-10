@@ -8,7 +8,7 @@
 </head>
 <style>
     body {
-        background-image: url("/Assets/imgs/quiz/BG2.jpg");
+        background-image: url("../../Assets/imgs/quiz/BG2.jpg");
         /*background-color: #f2f1ef;*/
     }
 
@@ -115,6 +115,38 @@
         color: #2b2b2b;
         font-size: 18px;
     }
+
+    .button,
+    .button-label,
+    .customer button,
+    .shopify-challenge__button {
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+        line-height: calc(1 + .2 / var(--font-body-scale));
+    }
+
+    .button,
+    .customer button,
+    .shopify-challenge__button {
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        font: inherit;
+        padding: 0.9rem 3rem 1.1rem;
+        text-decoration: none;
+        border: 0.1rem solid transparent;
+        border-radius: 0;
+        background-color:#121212;
+        box-shadow: 0 0 0 0.1rem #121212;
+        color: #fff;
+        min-width: 12rem;
+        min-height: 4.5rem;
+        transition: box-shadow 100ms ease;
+        -webkit-appearance: none;
+        appearance: none;
+    }
 </style>
 
 <body>
@@ -146,7 +178,7 @@
                     </div>
                 </div>
             </div>
-            <input class="btn btn-primary" id="btnEnviarResultados" style="display: none;" value="Guardar Resultados">
+            <input class=" button button--primary" id="btnEnviarResultados" style="display: none;" value="Guardar Resultados">
         </div>
     </div>
 
@@ -302,7 +334,7 @@
                     Resultados: resultados
                 },
                 //url: '../Quiz/GuardarResultados',
-                 url: 'https://dadoroom.com/vinos/Quiz/GuardarResultados',
+                url: 'https://dadoroom.com/vinos/Quiz/GuardarResultados',
                 type: 'post',
                 success: function(response) {
                     console.log("Bien");
