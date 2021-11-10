@@ -20,5 +20,9 @@ class Quiz extends App {
     public function Bienvenido() {/* Vista */
         include_once "Views/principal/template_Admin.php";
     }
+    public function GuardarResultados() { 
+        echo "aasdasd";
+         //echo var_dump($_POST);
+    }
 
 }

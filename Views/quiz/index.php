@@ -4,7 +4,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>QUIZZ WINE BOX CLUB</title>
-    <?php include_once 'Views/complementos/referencias/referencias.php'; ?> 
+    <?php include_once 'Views/complementos/referencias/referencias.php'; ?>
 </head>
 <style>
     body {
@@ -139,12 +139,18 @@
                     <div>
                         <p id="progress">Pregunta x de y</p>
                     </div>
+                    <div class="text-center">
+
+                    </div>
                 </div>
             </div>
+            <input class="btn btn-primary" id="btnEnviarResultados" style="display: none;" value="Guardar Resultados">
         </div>
     </div>
 
 
+
+    <?php include_once 'Views/complementos/referencias/referencias_footer.php'; ?>
     <script type="text/javascript">
         var respuestas = [];
         var respuestas1 = [];
@@ -183,6 +189,7 @@
         function populate() {
 
             if (quiz.isEnded()) {
+                $("#btnEnviarResultados").show("slow");
                 showScores();
             } else {
                 // show question
@@ -196,8 +203,6 @@
                     //element.innerHTML = images[choices[i]] ? '<img src="../Assets/imgs/quiz/' + images[choices[i]] + '"/>' : choices[i];
                     element.innerHTML = images[choices[i]] ? '<img src="https://dadoroom.com/vinos/Assets/imgs/quiz/' + images[choices[i]] + '"/>' : choices[i];
                     guess("btn" + i, choices[i]);
-
-
                 }
 
                 showProgress();
@@ -208,14 +213,8 @@
             var button = document.getElementById(id);
 
             button.onclick = function() {
-
-
-
-
                 const count = respuestas.push(id);
-
-
-
+                console.log(count)
                 quiz.guess(guess);
                 populate();
             }
@@ -234,7 +233,7 @@
 
             $.each(respuestas1, function(key, value) {
 
-                gameOverHTML += "<br> <h3>" + (key+1) +" " + value + "</h3>";
+                gameOverHTML += "<br> <h3>" + (key + 1) + " " + value + "</h3>";
             })
 
             var element = document.getElementById("quiz");
@@ -291,8 +290,28 @@
 
         // display quiz
         populate();
+        $("#btnEnviarResultados").on("click", function() {
+
+            var resultados = JSON.stringify(respuestas1)
+            $.ajax({
+                data: {
+                    Resultados: resultados
+                },
+               // url: '../vinos/Quiz/GuardarResultados',
+                url: 'https://dadoroom.com/vinos/Quiz/GuardarResultados',
+                type: 'post',
+                success: function(response) {
+                    console.log("Bien");
+                    console.log(response)
+                },
+                error: function(error) {
+                    console.log("Error");
+                    console.log(error);
+                }
+            });
+
+        })
     </script>
 </body>
 
-<?php include_once 'Views/complementos/referencias/referencias_footer.php'; ?> 
 </html>
