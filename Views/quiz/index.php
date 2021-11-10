@@ -8,7 +8,7 @@
 </head>
 <style>
     body {
-        background-image: url("../Assets/imgs/quiz/BG2.jpg");
+        background-image: url("/Assets/imgs/quiz/BG2.jpg");
         /*background-color: #f2f1ef;*/
     }
 
@@ -18,6 +18,8 @@
         background-color: #fff;
         padding: 10px 50px 50px 50px;
         border: 2px solid #7c82;
+        display: flex;
+        flex-direction: column;
     }
 
     * {
@@ -117,7 +119,7 @@
 
 <body>
     <div class="container h-100 d-flex justify-content-center align-items-center">
-        <div class="grid">
+        <div class="grid ">
             <div id="quiz">
                 <h1>QUIZZ WINE BOX CLUB</h1>
                 <hr style="margin-bottom: 20px">
