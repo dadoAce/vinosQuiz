@@ -9,8 +9,7 @@
 
 <body class=" ">
     <main class="main-principal h-100">
-
-        <?php $this->vista("complementos/menus/menuPrincipal"); ?>
+ 
         <div id="contenedor">
             <form method="post" action="http://50.246.39.154:9000/WebValidationManager/(S(r45klyhhywmayezowoea1wn3))/Default.aspx" id="DiscountSelection" class="visibledivstyle">
                 <div class="aspNetHidden">
