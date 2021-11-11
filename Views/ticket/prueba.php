@@ -20,7 +20,7 @@
                 </div>
 
                 <script type="text/javascript">
-                    //<![CDATA[
+                     
                     var theForm = document.forms['DiscountSelection'];
                     if (!theForm) {
                         theForm = document.DiscountSelection;
@@ -32,8 +32,7 @@
                             theForm.__EVENTARGUMENT.value = eventArgument;
                             theForm.submit();
                         }
-                    }
-                    //]]>
+                    } 
                 </script>
 
 
