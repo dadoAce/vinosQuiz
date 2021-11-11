@@ -16,6 +16,6 @@ class Ticket extends App
     public function inicio()
     {/* Vista */
  
-        $this->vista("ticket/inicio",);
+        $this->vista("ticket/prueba",);
     } 
 }
