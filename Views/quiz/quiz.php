@@ -158,8 +158,23 @@
         justify-content: center;
         align-items: center;
     }
+
+    .columna {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+
+    #contenedor {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
-<div class="container h-100 d-flex justify-content-center align-items-center">
+<div id="contenedor" class="container  ">
     <div class="dr_grid">
         <div id="dr-quiz-body">
             <h1>QUIZZ WINE BOX CLUB</h1>
@@ -188,7 +203,7 @@
             </div>
         </div>
         <div id="cuestionario" style="display: none;">
-            <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+            <div class="columna">
 
                 <label>Ingresa tu correo </label>
                 <input type="email" name="email" id="v_email">
