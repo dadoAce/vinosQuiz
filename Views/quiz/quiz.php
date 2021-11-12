@@ -203,7 +203,7 @@
             </div>
         </div>
         <div id="cuestionario" style="display: none;">
-            <div class="columna">
+            <div class="columna"> 
 
                 <label>Ingresa tu correo </label>
                 <input type="email" name="email" id="v_email">
