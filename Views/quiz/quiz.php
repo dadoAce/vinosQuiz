@@ -14,6 +14,7 @@
         border: 2px solid #7c82;
         display: flex;
         flex-direction: column;
+        min-height: 620px;
     }
 
     * {
