@@ -28,6 +28,20 @@ class Quiz extends App
     {/* Vista */
         include_once "Views/principal/template_Admin.php";
     }
+    public function detallesRespuesta()
+    {
+
+        $idRespuesta = $_GET["idRespuesta"];
+        require_once 'Modelo/RespuestaModel.php';
+        $RespuestaM = new RespuestaModel();
+        $result = $RespuestaM->select($idRespuesta); 
+        if ($result != null) {
+            echo  json_encode($result);
+        } else {
+            echo "Vacio";
+        }
+    }
+
     public function GuardarResultados()
     {
         require_once 'Modelo/RespuestaModel.php';

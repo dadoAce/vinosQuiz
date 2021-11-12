@@ -6,9 +6,9 @@
         <h5>Usuarios Activos</h5>
         <table class="table table-dark w-100">
             <thead>
-            <th>Usuarios</th>
+            <th>idUsuario</th>
+            <th>Usuario</th>
             <th>Rol</th>
-            <th>Estatus</th>
             <th> </th> 
             </thead>
             <tbody>
@@ -16,11 +16,9 @@
                     ?>
                     <?php foreach ($usuarios as $value) { ?>
                         <tr>
-                            <td><a href="<?php echo $this->base_url("Usuario/detallesUsuario/" . $value["idUsuario"]) ?>"class="text-white"> <?php echo $value["nombre"] ?></a></td> 
-                            <td><?php echo $value["rol"] ?></td> 
+                            <td><a href="<?php echo $this->base_url("Usuario/detallesUsuario/" . $value["idUsuario"]) ?>"class="text-white"> <?php echo $value["idUsuario"] ?></a></td> 
                             <td><?php echo $value["nombre"] ?></td>  
-                            <td><a href=" " class="btn btn-danger">Eliminar</a>
-                                <a href=" " class="btn btn-primary"> Detalles</a></td>
+                            <td><?php echo $value["rol"] ?></td> 
                         </tr>
                     <?php }
                     ?> 

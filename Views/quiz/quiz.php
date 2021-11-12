@@ -54,7 +54,13 @@
 
     .buttons {
         margin-top: 30px;
+
     }
+
+    .buttons.ocultar {
+        opacity: 0;
+    }
+
 
     #btn0,
     #btn1,
@@ -102,6 +108,8 @@
     #btn9:focus {
         outline: 0;
     }
+
+
 
     #progress {
         color: #2b2b2b;
@@ -153,7 +161,7 @@
             <h1>QUIZZ WINE BOX CLUB</h1>
             <hr style="margin-bottom: 20px">
             <p id="question"></p>
-            <div class="buttons">
+            <div class="buttons" id="myDIV">
                 <button id="btn0"><span id="choice0"></span></button>
                 <button id="btn1"><span id="choice1"></span></button>
                 <button id="btn2"><span id="choice2"></span></button>
@@ -190,19 +198,44 @@
         "Intermedio": "A2.png",
         "Avanzado": "A3.png",
         "Experto": "A4.png",
+
         "Vino Espumoso": "B1.png",
         "Vino Blanco": "B2.png",
         "Vino Rosado": "B3.png",
         "Vino Tinto": "B4.png",
         "Vino Dulce": "B5.png",
+
         "Fruta Cítrica": "C1.png",
         "Fruta de Hueso": "C2.png",
         "Fruta Exótica": "C3.png",
         "Fruta Tropical": "C4.png",
+
         "Especiados": "D1.png",
         "Florales": "D2.png",
         "Herbales": "D3.png",
         "Minerales": "D4.png",
+
+        "Panaderia": "E1.png",
+        "Miel": "E2.png",
+        "Compotados": "E3.png",
+        "Frutos Secos": "E4.png",
+
+        "Frutos Negros Higo": "F1.png",
+        "Frutos Negros Mora": "F2.png",
+        "Frutos Rojos Fresa": "F3.png",
+        "Frutos Rojos Cereza": "F4.png",
+
+        "Barrica Chocolate": "G1.png",
+        "Barrica Café": "G2.png",
+        "Sin Barrica Pasas": "G3.png",
+        "Sin Barrica Mermelada": "G4.png",
+
+
+        "Malbec": "H1.png",
+        "Cabernet": "H2.png",
+        "Shira": "H3.png",
+        "Tempranillo": "H4.png",
+
         "Francia": "Z1.png",
         "Italia": "Z2.png",
         "Portugal": "Z3.png",
@@ -243,14 +276,19 @@
     function guess(id, guess) {
         var button = document.getElementById(id);
 
+
         button.onclick = function() {
             const count = respuestas.push(id);
             console.log(count)
             quiz.guess(guess);
             populate();
+
         }
 
     };
+
+
+
 
     function showProgress() {
         var currentQuestionNumber = quiz.questionIndex + 1;
@@ -264,19 +302,28 @@
 
         $.each(respuestas1, function(key, value) {
 
+            var x = document.getElementById("myDIV"); //esconder div
+
+            x.style.display = "block";
+
             gameOverHTML += "<br> <h3>" + (key + 1) + " " + value + "</h3>";
         })
-
+        $('#buttons').remove();
         var element = document.getElementById("dr-quiz-body");
         element.innerHTML = gameOverHTML;
     };
 
     // create questions
     var questions = [
-        new Question("¿Qué tanto sabes de vinos?", ["Principiante", "Intermedio", "Avanzado", "Experto"], "Principiante"),
+        new Question("¿Qué tanto sabes de vinos?", ["Principiante", "Intermedio", "Avanzado"], "Principiante"),
+
         new Question("¿Qué estilo de vino te gusta más?", ["Vino Espumoso", "Vino Blanco", "Vino Rosado", "Vino Tinto", "Vino Dulce"], "Vino Espumoso"),
-        new Question("¿Cuál de las siguientes frutas te gusta más?", ["Fruta Cítrica", "Fruta de Hueso", "Fruta Exótica", "Fruta Tropical"], "Fruta Cítrica"),
-        new Question("¿Cuál de los siguientes aromas te gusta más??", ["Especiados", "Florales", "Herbales", "Minerales"], "Especiados"),
+        new Question("¿Cuál de las siguientes frutas te gusta más?", ["Fruta Cítrica", "Fruta de Hueso", "Fruta Exótica", "Fruta Tropical", ""], "Fruta Cítrica"),
+        new Question("¿Cuál de los siguientes aromas te gusta más?", ["Especiados", "Florales", "Herbales", "Minerales", ""], "Especiados"),
+        new Question("¿Qué aroma crees que acompañe mejor a un vino blanco?", ["Panaderia", "Miel", "Compotados", "Frutos Secos", ""], "Miel"),
+        new Question("De las siguientes frutas ¿cuál prefieres?", ["Frutos Negros Higo", "Frutos Negros Mora", "Frutos Rojos Fresa", "Frutos Rojos Cereza", ""], "Frutos Rojos Fresa"),
+        new Question("¿Qué sabor disfrutas más?", ["Barrica Chocolate", "Barrica Café", "Sin Barrica Pasas", "Sin Barrica Mermelada", ""], "Barrica Chocolate"),
+        new Question("¿Qué sabor disfrutas más?", ["Malbec", "Cabernet", "Shira", "Tempranillo", ""], "Malbec"),
         new Question("¿De qué país consumes más vinos?", ["Francia", "Italia", "Portugal", "España", "Estados Unidos", "Argentina", "Chile", "México", "Australia", "Nueva Zelanda"], "Francia"),
     ];
 
@@ -326,13 +373,13 @@
         var usuario = $("#dr-quiz").data("origen");
         var resultados = JSON.stringify(respuestas1)
         console.log(usuario);
-      
+
         $.ajax({
 
             dataType: "json",
             data: {
                 Resultados: resultados,
-                usuario:usuario
+                usuario: usuario
             },
             //url: '../Quiz/GuardarResultados',
             url: 'https://dadoroom.com/vinos/Quiz/GuardarResultados',
@@ -348,7 +395,7 @@
                 alert("Ocurrio un error");
             }
         });
-        
+
 
     })
 </script>
