@@ -1,7 +1,9 @@
 <style>
     body {
-        background-image: url("https://dadoroom.com/vinos/Assets/imgs/quiz/BG2.jpg");
-        /*background-color: #f2f1ef;*/
+        background-image: url("https://dadoroom.com/vinos/Assets/imgs/bg/bg-2-min.jpg");
+
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .dr_grid {
@@ -47,6 +49,8 @@
     }
 
     .dr_grid #question {
+
+        text-align: center;
         font-family: "monospace";
         font-size: 30px;
         color: #22161c;
@@ -183,7 +187,19 @@
                 </div>
             </div>
         </div>
-        <input class=" button button--primary" id="btnEnviarResultados" style="display: none;" value="Guardar Resultados" type="button">
+        <div id="cuestionario" style="display: none;">
+            <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+
+                <label>Ingresa tu correo </label>
+                <input type="email" name="email" id="v_email">
+                <br>
+                <div class="w-100 text-center">
+
+                    <input type="button" value="Guardar" id="btnGuardarEmail" class="btn btn-primary  button button--primary">
+                </div>
+            </div>
+        </div>
+        <input class=" button button--primary" id="btnEnviarResultados" style="display: none;" value="Enviar" type="button">
     </div>
 </div>
 
@@ -249,12 +265,30 @@
 
 
     }
+    const cuestionario = () => {
+        console.log("cuestionario")
+        $("#cuestionario").show("slow");
+        $("#dr-quiz-body").html("")
+        $("#btnGuardarEmail").on("click", function() {
+            $("#cuestionario").hide("slow");
+            var usuario = $("#v_email").val();
+            if (usuario != "") {
+
+                showScores();
+                $("#btnEnviarResultados").show("slow");
+            } else {
+                alert("Coloca un correo")
+            }
+
+        });
+    }
 
     function populate() {
 
         if (quiz.isEnded()) {
-            $("#btnEnviarResultados").show("slow");
-            showScores();
+            console.log("Finalizo")
+            cuestionario();
+
         } else {
             // show question
             var element = document.getElementById("question");
@@ -301,11 +335,11 @@
         gameOverHTML += "<h2 id='score'> Tus resultados:  </h2>";
 
         $.each(respuestas1, function(key, value) {
-
+            /*
             var x = document.getElementById("myDIV"); //esconder div
 
             x.style.display = "block";
-
+*/
             gameOverHTML += "<br> <h3>" + (key + 1) + " " + value + "</h3>";
         })
         $('#buttons').remove();
@@ -370,7 +404,9 @@
     populate();
     $("#btnEnviarResultados").on("click", function() {
         $(this).hide("fast")
-        var usuario = $("#dr-quiz").data("origen");
+        //var usuario = $("#dr-quiz").data("origen");
+        var usuario = $("#v_email").val();
+
         var resultados = JSON.stringify(respuestas1)
         console.log(usuario);
 
