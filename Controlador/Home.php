@@ -45,4 +45,8 @@ class Home extends App
         /* Vista */
         $this->vista("principal/respuestas", $datos);
     }
+
+    public function tickets(){
+        echo "9999";
+    }
 }
