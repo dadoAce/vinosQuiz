@@ -5,6 +5,8 @@ $shop = $_GET['shop'];
 $api_key = "46c7a89d69acccff9847def5eb0346af";
 $scopes = "read_orders,write_products";
 
+//codigo
+//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
 /* 
 **/
 $scopes = "read_orders,read_products";
