@@ -49,4 +49,8 @@ class Home extends App
     public function tickets(){
         echo "9999";
     }
+
+    public function tabla(){
+        echo "<>";
+    }
 }

@@ -9,10 +9,10 @@ class App
     /* Direccion del proyecto:
       para local usar : */
 
-    //public $base_url = "/vinosQuiz";
+    public $base_url = "/vinosQuiz";
 
     /* Para servidor en linea usar la direccion del sitio */
-     public $base_url = "/vinos/";
+    // public $base_url = "/vinos/";
 
     /* Controlador a cargar pro default */
     public $controlador_default = "Home";
