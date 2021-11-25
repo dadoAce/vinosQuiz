@@ -7,9 +7,9 @@ $scopes = "read_orders,write_products";
 
 /* 
 **/
-$scopes = "read_orders,read_products,write_products,read_discounts,write_discounts,read_price_rules,write_price_rules";
+$scopes = "read_orders,read_products";
 
-$redirect_uri = "https://www.dadoroom.com/shopifyapp/generate_token.php";
+$redirect_uri = "https://www.dadoroom.com/vinos/generate_token.php";
 
 // Build install/approval URL to redirect to
 $install_url = "https://" . $shop . ".myshopify.com/admin/oauth/authorize?client_id=" . $api_key . "&scope=" . $scopes . "&redirect_uri=" . urlencode($redirect_uri);
