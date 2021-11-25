@@ -2,7 +2,7 @@
 
 // Set variables for our request
 $shop = $_GET['shop'];
-$api_key = "46c7a89d69acccff9847def5eb0346af";
+$api_key = "b530430edc6f25ec824bf19f66a2a36a";
 $scopes = "read_orders,write_products";
 
 //codigo
