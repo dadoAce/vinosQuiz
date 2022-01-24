@@ -1,6 +1,6 @@
 <?php
  
-//PRUEBA
+//DESARROLLO
 
  header('Access-Control-Allow-Origin: *');  
 require_once 'libs/App.php'; 
